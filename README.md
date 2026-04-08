@@ -51,3 +51,50 @@ It helps reduce manual effort in:
 ### 1. Install dependencies
 ```bash
 pip install fastapi uvicorn
+
+2. Start server
+uvicorn main:app --reload
+
+3. Open API docs
+http://127.0.0.1:8000/docs
+
+sample request
+{
+  "title": "Database outage",
+  "description": "Users unable to connect to DB",
+  "severity": "High"
+}
+
+📡 API Endpoints
+🔹 Create Incident
+
+POST /create-incident
+
+Sample Request:
+
+{
+  "title": "Database outage",
+  "description": "Users unable to connect to DB",
+  "severity": "High"
+}
+🔹 Get All Incidents
+
+GET /incidents
+
+📊 Sample Output
+{
+  "id": 1,
+  "title": "Database outage",
+  "category": "Database",
+  "priority": "P1",
+  "status": "Open"
+}
+🔮 Future Enhancements
+🔔 Email alerts for P1 incidents
+☁️ Azure cloud deployment
+📊 Dashboard (Power BI / Streamlit)
+🤖 AI-based incident classification (NLP)
+👨‍💻 Author
+
+Shaik Fahad
+IT Support Engineer | Incident Management | Azure | Python
